@@ -24,8 +24,6 @@ const NavbarButton = ({label, url, router} : {label : string, url : string, rout
 
     const isActive = router.pathname.toLocaleLowerCase() == url.toLocaleLowerCase();
 
-    console.log('isActive', isActive);
-
     return (
         <a href={url} className={[styles['navbar-item'], inter.className, (isActive) && styles['navbar-item-active'],].join(" ")}>
             {label}
@@ -65,11 +63,11 @@ const Navbar = () => {
             { /* Right Side Navbar */ }
             <div>
                 <NavbarButton label={'Home'} url={'/'} router={router}/>
-                <NavbarButton label={'Team'} url={'Team'} router={router}/>
-                <NavbarButton label={'Robots'} url={'Robots'} router={router}/>
-                <NavbarButton label={'Blog'} url={'Blog'} router={router}/>
-                <NavbarButton label={'Sponsors'} url={'Sponsors'} router={router}/>
-                <NavbarButton label={'Contact Us'} url={'Contact'} router={router}/>
+                <NavbarButton label={'Team'} url={'/Team'} router={router}/>
+                <NavbarButton label={'Robots'} url={'/Robots'} router={router}/>
+                <NavbarButton label={'Blog'} url={'/Blog'} router={router}/>
+                <NavbarButton label={'Sponsors'} url={'/Sponsors'} router={router}/>
+                <NavbarButton label={'Contact Us'} url={'/Contact'} router={router}/>
             </div>
         </nav>
     )
