@@ -1,5 +1,6 @@
 import { NextRouter, useRouter } from 'next/router'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import styles from './navbar.module.css';
 
@@ -25,9 +26,9 @@ const NavbarButton = ({label, url, router} : {label : string, url : string, rout
     const isActive = router.pathname.toLocaleLowerCase() == url.toLocaleLowerCase();
 
     return (
-        <a href={url} className={[styles['navbar-item'], inter.className, (isActive) && styles['navbar-item-active'],].join(" ")}>
+        <Link  href={url} className={[styles['navbar-item'], inter.className, (isActive) && styles['navbar-item-active'],].join(" ")}>
             {label}
-        </a>
+        </Link >
     )
 }
 
@@ -65,7 +66,7 @@ const Navbar = () => {
                 <NavbarButton label={'Home'} url={'/'} router={router}/>
                 <NavbarButton label={'Team'} url={'/Team'} router={router}/>
                 <NavbarButton label={'Robots'} url={'/Robots'} router={router}/>
-                <NavbarButton label={'Blog'} url={'/Blog'} router={router}/>
+                <NavbarButton label={'Blog'} url={'https://blog.team5599.com/'} router={router}/>
                 <NavbarButton label={'Sponsors'} url={'/Sponsors'} router={router}/>
                 <NavbarButton label={'Contact Us'} url={'/Contact'} router={router}/>
             </div>
