@@ -1,0 +1,13 @@
+.robot-grid {
+    display : grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap : 20px;
+    width : min(100%, 1200px);
+}
+
+@media (max-width: 1120px) {
+    .robot-grid  {
+        grid-template-columns: 1fr;
+    }
+}
