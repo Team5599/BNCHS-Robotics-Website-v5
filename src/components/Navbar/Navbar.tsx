@@ -15,6 +15,9 @@ const inter = Inter({ subsets: ['latin'] })
         + has "smart" higlighting depending on the page
         + nice animations
         + sticky navbar that scrolls, resizes & recolors, and moves with page
+
+    IDEAS
+        + Logo could animate and 'swirl' in
 */
 
 const NavbarButton = ({label, url, router} : {label : string, url : string, router : NextRouter}) => {
