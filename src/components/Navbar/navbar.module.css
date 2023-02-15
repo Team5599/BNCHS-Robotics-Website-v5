@@ -1,7 +1,60 @@
 .navbar {
     display: flex;
+    justify-content: space-between;
     width : 100%;
     height : 60px;
     background-color : '#000';
     border-bottom: 1px solid #111;
+    padding : 10px;
+    padding-left : 40px;
+    padding-right : 40px;
+}
+
+.navbar > div {
+    display : flex;
+    flex-direction: row;
+    align-items: center;
+    gap : 5px
+}
+
+/* Navbar Items */
+
+.navbar-item {
+    height : 100%;
+    padding : 10px;
+    padding-left : 15px;
+    padding-right : 15px;
+    text-align: center;
+    border-radius: 2px;
+    color : #aaa;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.navbar-item:hover {
+    color : #fff;
+    background-color: #ffffff08;
+}
+
+.navbar-item-active {
+    color : #fff;
+}
+
+/* Navbar Logo */
+
+@font-face {
+    font-family: 'BLADERUNNER';
+    src: url('/assets/fonts/BLADRMF_.ttf');
+}
+
+.navbar-logo {
+    display: flex;
+    justify-content: center;
+    align-items : center;
+    gap : 10px
+}
+
+.navbar-logo > span {
+    margin-top : 2px;
+    font-size: 22px;
+    font-family: 'BLADERUNNER';
 }
