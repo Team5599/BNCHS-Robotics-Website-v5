@@ -10,7 +10,7 @@ jobs:
   eslint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Install dependencies
         run: npm install
       - name: Run ESLint
@@ -20,7 +20,7 @@ jobs:
     if: github.ref == 'refs/heads/heroku' && needs.eslint.result == 'success'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: akhileshns/heroku-deploy@v3.12.13 # External action to push to the heroku repository
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
