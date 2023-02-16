@@ -34,7 +34,7 @@ const NavbarButton = ({label, url, router} : {label : string, url : string, rout
 
 const NavLogo = () => {
     return (
-        <a href="/" className={styles['navbar-logo']}>
+        <Link href="/" className={styles['navbar-logo']}>
             <Image
                 src="/assets/images/Logo.png"
                 height={32}
@@ -48,7 +48,7 @@ const NavLogo = () => {
             <span>
                 The Sentinels
             </span>
-        </a>
+        </Link>
     )
 }
 const Navbar = () => {
