@@ -1,16 +1,26 @@
-name: Deploy
+name: CI
 
 on:
   push:
     branches:
+      - main
       - heroku
 
 jobs:
-  build:
+  eslint:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Install dependencies
+      run: npm install
+    - name: Run eslint
+      run: npm run lint
+  deploy:
+    needs: eslint
+    if: github.ref == 'refs/heads/heroku' && needs.eslint.result == 'success'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: akhileshns/heroku-deploy@v3.12.13 # This is the action
+      - uses: akhileshns/heroku-deploy@v3.12.13 # External action to push to the heroku repository
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "bnchs-robotics-website-v5"
