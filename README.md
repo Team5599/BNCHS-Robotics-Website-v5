@@ -22,7 +22,7 @@ Visit the live version over at [beta.team5599.com](https://beta.team5599.com/).
     - [Assets](#assets)
     - [Environment Variables](#environment-variables)
   - [Style Guides \& Best Practices](#style-guides--best-practices)
-- [Deploying to Production / Heroku](#deploying-to-production--heroku)
+- [Deploying to Heroku](#deploying-to-heroku)
 - [Other Documentation](#other-documentation)
   - [Express v3 Server / v3 REST API](#express-v3-server--v3-rest-api)
   - [Database](#database)
@@ -219,13 +219,11 @@ Along with these rules, please consider the following:
 
 >[2] If you like to build your components with in-line styles first, you can definitely do this and then move them to a modular css file later.
 
-# Deploying to Production / Heroku
+# Deploying to Heroku
 
-Any changes pushed to the ``production`` branch are automatically built, tested, and deployed to Heroku.
+Any changes pushed to the ``heroku`` branch are automatically built, tested, and deployed to Heroku.
 
-Do. Not. Push. To. Production. Unless. You. Know. What. You're. Doing.
-
-You can visit the production branch live at [https://beta.team5599.com/]. 
+You can visit the heroku branch live at [https://beta.team5599.com/]. 
 
 # Other Documentation
 
