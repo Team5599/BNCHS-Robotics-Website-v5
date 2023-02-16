@@ -1,5 +1,7 @@
 # BNCHS Robotics Website v5.0 <!-- omit in toc -->
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)	![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) 	![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)     ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white) ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white) ![ESLint](https://github.com/Team5599/BNCHS-Robotics-Website-v5/actions/workflows/lint.yml/badge.svg)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)	![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) 	![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)     ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white) ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
+
+![ESLint](https://github.com/Team5599/BNCHS-Robotics-Website-v5/actions/workflows/lint.yml/badge.svg)
 
 The official website for the BNCHS Robotics Team | FRC Team #5599 - The Sentinels!
 
@@ -51,9 +53,11 @@ npm install
 # Run the project locally
 npm run dev
 
-# This will start the nextJS application. A live version of the website will be available for you to preview at https://localhost:3000/
+# This will start the nextJS application.
+# A live version of the website will be available for you to preview at https://localhost:3000/
 
-# This project supports "hot-reloading", meaning any changes you make and save in your editor will automatically update in the browser without needing to restart the program or reload the page
+# This project supports "hot-reloading", meaning any changes you make and save in your editor
+# will automatically update in the browser without needing to restart the program or reload the page
 
 ```
 
@@ -64,7 +68,7 @@ Visit [http://localhost:3000/](http://localhost:3000/) in your browser to ensure
 
 # Making Contributions
 
-Contributions are welcomed by developers, regardless of experience. 
+Contributions by all developers are welcome, regardless of experience. 
 
 > If you are making a major contribution that adds a new feature, page, or changes a significant amount of code-- please checkout a new branch and make your changes there. You may then submit a pull request for us to review and merge.
 
