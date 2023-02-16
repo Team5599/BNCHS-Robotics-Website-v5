@@ -1,5 +1,5 @@
 # BNCHS Robotics Website v5.0 <!-- omit in toc -->
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)	![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) 	![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)     ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white) ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)	![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) 	![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)     ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white) ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white) ![ESLint](https://github.com/Team5599/BNCHS-Robotics-Website-v5/actions/workflows/lint.yml/badge.svg)
 
 The official website for the BNCHS Robotics Team | FRC Team #5599 - The Sentinels!
 
@@ -23,6 +23,7 @@ Visit the live version over at [beta.team5599.com](https://beta.team5599.com/).
     - [Environment Variables](#environment-variables)
   - [Style Guides \& Best Practices](#style-guides--best-practices)
 - [Deploying to Heroku](#deploying-to-heroku)
+  - [GitHub Actions](#github-actions)
 - [Other Documentation](#other-documentation)
   - [Express v3 Server / v3 REST API](#express-v3-server--v3-rest-api)
   - [Database](#database)
@@ -221,9 +222,20 @@ Along with these rules, please consider the following:
 
 # Deploying to Heroku
 
-Any changes pushed to the ``heroku`` branch are automatically built, tested, and deployed to Heroku.
+The ``heroku`` branch is responsible for deploying to our live production server Heroku.
 
-You can visit the heroku branch live at [https://beta.team5599.com/]. 
+You cannot push directly to the ``heroku`` branch. You must create a pull request to merge your branch into the ``heroku`` branch. When you create a pull request an ESLint check is run to ensure there are no issues with the updates. If the ESLint check is successful, the pull request can be merged-- this will immediately trigger deployment to the Heroku server.
+
+
+## GitHub Actions
+
+We use GitHub Actions for our CI/CD pipeline.
+
+Whenever changes are pushed to or merged into the ``main`` or ``heroku`` branch, GitHub Actions runs our ESLint check.
+
+The ESLint check is responsible for identifying and reporting on patterns found in our code, with the goal of making code more consistent and avoiding bugs. It can catch breaking bugs and unoptimizations before we deploy them to Heroku.
+
+When a pull request passes the ESLint check and is successfully merged into the ``heroku`` branch, GitHub Actions runs our Heroku Deploy action, responsible for uploading the code to Heroku.
 
 # Other Documentation
 
